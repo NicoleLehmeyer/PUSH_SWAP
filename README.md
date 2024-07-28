@@ -9,36 +9,47 @@
   <b>Requirements:</b><br><br>
   The program must sort a list of integers in ascending order, using the allowed 'moves' to organise the integers across two stacks, <b>'stack a'</b> and <b>'stack b'</b>.<br><br>
   The integers to be sorted must be firstly placed in 'stack a', with the first argument at the top of the stack. 'stack b' begins empty.<br><br>
-  The sort is to be completed within the maximum number of operations:<br>
+  <b>The sort is to be completed within the maximum number of operations:</b><br>
   - Sort 3 values in <= 3 operations<br>
   - Sort 5 values in <= 12 operations<br>
   - Sort 100 values in <= 700 operations (for 100% project validation)<br>
   - Sort 500 values in <= 5500 operations (for 100% project validation)<br><br>
-  The allowed operations are as follows:<br>
-  - <code>sa</code> <code>(swap a)</code>: Swap top 2 elements in stack <code>a</code><br>
-  - <code>sb</code> <code>(swap b)</code>: Swap top 2 elements in stack <code>a</code><br>
+  <b>The allowed operations are as follows:</b><br>
+  - <code>sa</code>: <code>(swap a)</code> Swap top 2 elements in stack <code>a</code><br>
+  - <code>sb</code>: <code>(swap b)</code> Swap top 2 elements in stack <code>a</code><br>
   - <code>ss</code>: <code>sa</code> & <code>sb</code> simultaneously<br>
-  - <code>pa</code> <code>(push a)</code>: Move element at top of <code>b</code> and place on top of <code>a</code><br>
-  - <code>pb</code> <code>(push b)</code>: Move element at top of <code>a</code> and place on top of <code>b</code><br>
-  - <code>ra</code> <code>(rotate a)</code>: Shift up all elements in stack <code>a</code>. First element becomes the last.<br>
-  - <code>rb</code> <code>(rotate b)</code>: Shift up all elements in stack <code>b</code>. First element becomes the last.<br>
+  - <code>pa</code>: <code>(push a)</code> Move element at top of <code>b</code> and place on top of <code>a</code><br>
+  - <code>pb</code>: <code>(push b)</code> Move element at top of <code>a</code> and place on top of <code>b</code><br>
+  - <code>ra</code>: <code>(rotate a)</code> Shift up all elements in stack <code>a</code>. First element becomes the last.<br>
+  - <code>rb</code>: <code>(rotate b)</code> Shift up all elements in stack <code>b</code>. First element becomes the last.<br>
   - <code>rr</code>: <code>ra</code> & <code>rb</code> simultaneously<br>
-  - <code>rrb</code> <code>(reverse rotate b)</code>: Shift down all elements in stack <code>b</code>. Last element becomes the first.<br>
-  - <code>rra</code> <code>(reverse rotate a)</code>: Shift down all elements in stack <code>a</code>. Last element becomes the first.<br>
+  - <code>rrb</code>: <code>(reverse rotate b)</code> Shift down all elements in stack <code>b</code>. Last element becomes the first.<br>
+  - <code>rra</code>: <code>(reverse rotate a)</code> Shift down all elements in stack <code>a</code>. Last element becomes the first.<br>
   - <code>rrr</code>: <code>rra</code> & <code>rrb</code> simultaneously<br><br>
 
 
-  Across<br><br>
-  May only use 2 signals - SIGUSR1 & SIGUSR2.<br><br>
-  The client must send the string to the server, and the server must print this string... quickly.<br><br>
   Use of <a href="https://github.com/NicoleLehmeyer/LIBFT">libft</a> is permitted.<br><br>
-  Use of one global variable is allowed. Program must be written in C, and <a href="https://github.com/NicoleLehmeyer/LIBFT/blob/main/subject/norme.pdf">Norminette</a> (42 organisational syntax) compliant, without seg fault/bus error/double free etc.
+  No global variables permitted.<br><br>
+  Program must be written in C, and <a href="https://github.com/NicoleLehmeyer/LIBFT/blob/main/subject/norme.pdf">Norminette</a> (42 organisational syntax) compliant, without seg fault/bus error/double free etc.
   <br>
   <br>
   <br>
   <b>Method:</b><br><br>
-  1.  Client converts the inputted characters to bits, sending them to the server using SIGUSR1 if bit is a 1, or SIGUSR2 if bit is 0, for 8 bits (equiv. to char)<br><br>
-  2.  Server receives signals, storing the bits in variable 'g_store' until until 8 bits been received. This is then printed in the output in the server's main function.<br><br>
+  1.  Process arguments: Return error if argument format is incorrect (ie. non-number, non-sign characters) or duplicates are present, handle '+' and '-', and handle if args are written in "", ie. "20 -3 80". Handle <br>
+  2.  Initialise stacks & fill 'stack a'<br>
+  3.  PUSH SWAP SORT: (a) small sorts for 2 & 3 integers. (b) big sort for < 3 integers<br>
+  4.  Free stacks<br>
+  <br>
+  BIG SORT:<br>
+  1. Push all but 3 integers to 'stack b'<br>
+  2. Small sort on 'stack a' to create an ascending order<br>
+  3. For each integer in 'stack b', assign: (1) target position - position in 'stack a' with value of next lowest value, (2) cost - lowest number of moves to get 'stack b' integer to its target position in 'stack a'.<br>
+  4. Execute the sequence of operations for the 'stack b' integer with the 'cheapest' move number to get to its target position.<br>
+  5. Repeat until there are no values in 'stack b', then ra/rra (dependent on if smallest int is in top or bottom half of the stack) until the smallest value is at the top of the stack.<br>
+  <br>
+
+  
+  
   <br>
 </p>
 
