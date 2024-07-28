@@ -2,47 +2,48 @@
 
 NAME = push_swap
 
-FLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -Iinclude
 
-LIBFT_ARCHIVE = LIBFT/libft.a
+LIBFT_ARCHIVE = include/LIBFT/libft.a
 
-SOURCES = assist_correct_input.c \
-	cost_analysis.c \
-	ft_printf_checks.c \
-	initstack.c \
-	is_correct_input.c \
-	main.c \
-	move_seqs.c \
-	process_args.c \
-	push.c \
-	rev_rotate.c \
-	rotate.c \
-	sort_small.c \
-	sort_big.c \
-	stack.c \
-	swap.c \
-	target_position.c \
-	utils.c \
+SOURCES = src/assist_correct_input.c \
+	src/cost_analysis.c \
+	src/ft_printf_checks.c \
+	src/initstack.c \
+	src/is_correct_input.c \
+	src/main.c \
+	src/move_seqs.c \
+	src/process_args.c \
+	src/push.c \
+	src/rev_rotate.c \
+	src/rotate.c \
+	src/sort_small.c \
+	src/sort_big.c \
+	src/stack.c \
+	src/swap.c \
+	src/target_position.c \
+	src/utils.c \
 
-OBJECTS = $(SOURCES:%.c=%.o)
+OBJECTS = $(SOURCES:src/%.c=obj/%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS) $(LIBFT_ARCHIVE)
 	gcc $(FLAGS) $(LIBFT_ARCHIVE) $(OBJECTS) -o $(NAME)
 
-%.o: %.c
+obj/%.o: src/%.c
+	mkdir -p obj
 	cc $(FLAGS) -Imlx -c $< -o $@
 
 $(LIBFT_ARCHIVE):
 	$(MAKE) -s -C LIBFT
 
 clean:
-	rm -f $(OBJECTS)
-	$(MAKE) fclean -s -C LIBFT
+	rm -rf obj
+	$(MAKE) fclean -s -C include/LIBFT
 
 fclean: clean
 	rm -f $(NAME)
-	$(MAKE) fclean -s -C LIBFT
+	$(MAKE) fclean -s -C include/LIBFT
 
 re: fclean all

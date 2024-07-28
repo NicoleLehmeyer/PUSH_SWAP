@@ -12,7 +12,7 @@
 
 #ifndef PUSHSWAP_H
 # define PUSHSWAP_H
-# include "LIBFT/libft.h"
+# include "../include/LIBFT/include/libft.h"
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>

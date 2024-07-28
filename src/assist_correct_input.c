@@ -55,6 +55,8 @@ int	nb_str_cmp(const char *s1, const char *s2)
 
 int	has_greater_than_max_int(char *argv)
 {
+	int len;
+	
 	len = ft_strlen(argv);
 	if (len >= 12)
 		return (1);
