@@ -7,7 +7,7 @@
   <br>
   <br>
   <b>Requirements:</b><br><br>
-  The program must sort a list of integers in ascending order, using the allowed 'moves' to organise the integers across two stacks, <b>'stack a'</b> and <b>'stack b'</b>.<br><br>
+  The program must sort a list of integers in ascending order, using the allowed 'operations' to organise the integers across two stacks, <b>'stack a'</b> and <b>'stack b'</b>.<br><br>
   The integers to be sorted must be firstly placed in 'stack a', with the first argument at the top of the stack. 'stack b' begins empty.<br><br>
   <b>The sort is to be completed within the maximum number of operations:</b><br>
   - Sort 3 values in <= 3 operations<br>
@@ -25,7 +25,9 @@
   - <code>rr</code>: <code>ra</code> & <code>rb</code> simultaneously<br>
   - <code>rrb</code>: <code>(reverse rotate b)</code> Shift down all elements in stack <code>b</code>. Last element becomes the first.<br>
   - <code>rra</code>: <code>(reverse rotate a)</code> Shift down all elements in stack <code>a</code>. Last element becomes the first.<br>
-  - <code>rrr</code>: <code>rra</code> & <code>rrb</code> simultaneously<br><br>
+  - <code>rrr</code>: <code>rra</code> & <code>rrb</code> simultaneously<br>
+  <br>
+  List of operations executed must display in the standard output, each seperated by a newline character.<br>
 
 
   Use of <a href="https://github.com/NicoleLehmeyer/LIBFT">libft</a> is permitted.<br><br>
@@ -34,7 +36,7 @@
   <br>
   <br>
   <br>
-  <b>Method:</b><br><br>
+  <b>Method:</b><br>
   1.  Process arguments: Return error if argument format is incorrect (ie. non-number, non-sign characters) or duplicates are present, handle '+' and '-', and handle if args are written in "", ie. "20 -3 80". Handle <br>
   2.  Initialise stacks & fill 'stack a'<br>
   3.  PUSH SWAP SORT: (a) small sorts for 2 & 3 integers. (b) big sort for < 3 integers<br>
