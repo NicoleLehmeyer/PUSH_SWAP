@@ -10,15 +10,15 @@
   The program must sort a list of integers in ascending order, using the allowed 'moves' to organise the integers across two stacks, 'stack a' and 'stack b'.<br><br>
   The integers to be sorted must be firstly placed in 'stack a', with the first argument at the top of the stack.<br><br>
   The sort is to be completed within the maximum number of operations:<br>
-  * Sort 3 values in <= 3 operations<br>
-  * Sort 5 values in <= 12 operations<br>
-  * Sort 100 values in <= 700 operations (for 100% project validation)<br>
-  * Sort 500 values in <= 5500 operations (for 100% project validation)<br><br>
+  - Sort 3 values in <= 3 operations<br>
+  - Sort 5 values in <= 12 operations<br>
+  - Sort 100 values in <= 700 operations (for 100% project validation)<br>
+  - Sort 500 values in <= 5500 operations (for 100% project validation)<br><br>
   The allowed operations are as follows:<br>
-  * <code>sa (swap a)</code>: Swap top 2 elements in stack <code>a</code>
-  * <code>sb (swap b)</code>: 
-  * <code>ss</code>: <code>sa</code> & <code>sb</code> simultaneously
-  * <code>pa</code>: 
+  - <code>sa (swap a)</code>: Swap top 2 elements in stack <code>a</code><br>
+  - <code>sb (swap b)</code>: <br>
+  - <code>ss</code>: <code>sa</code> & <code>sb</code> simultaneously<br>
+  - <code>pa</code>: <br>
 
   Across<br><br>
   May only use 2 signals - SIGUSR1 & SIGUSR2.<br><br>
