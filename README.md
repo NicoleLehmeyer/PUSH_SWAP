@@ -15,7 +15,7 @@
   - Sort 100 values in <= 700 operations (for 100% project validation)<br>
   - Sort 500 values in <= 5500 operations (for 100% project validation)<br><br>
   The allowed operations are as follows:<br>
-  - <code>sa (swap a)</code>: Swap top 2 elements in stack <code>a</code><br>
+  - <code>sa</code> <code>(swap a)</code>: Swap top 2 elements in stack <code>a</code><br>
   - <code>sb (swap b)</code>: <br>
   - <code>ss</code>: <code>sa</code> & <code>sb</code> simultaneously<br>
   - <code>pa</code>: <br>
