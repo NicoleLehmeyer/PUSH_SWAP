@@ -7,8 +7,8 @@
   <br>
   <br>
   <b>Requirements:</b><br><br>
-  The program must sort a list of integers in ascending order, using the allowed 'moves' to organise the integers across two stacks, 'stack a' and 'stack b'.<br><br>
-  The integers to be sorted must be firstly placed in 'stack a', with the first argument at the top of the stack.<br><br>
+  The program must sort a list of integers in ascending order, using the allowed 'moves' to organise the integers across two stacks, <b>'stack a'</b> and <b>'stack b'</b>.<br><br>
+  The integers to be sorted must be firstly placed in 'stack a', with the first argument at the top of the stack. 'stack b' begins empty.<br><br>
   The sort is to be completed within the maximum number of operations:<br>
   - Sort 3 values in <= 3 operations<br>
   - Sort 5 values in <= 12 operations<br>
@@ -16,9 +16,17 @@
   - Sort 500 values in <= 5500 operations (for 100% project validation)<br><br>
   The allowed operations are as follows:<br>
   - <code>sa</code> <code>(swap a)</code>: Swap top 2 elements in stack <code>a</code><br>
-  - <code>sb (swap b)</code>: <br>
+  - <code>sb</code> <code>(swap b)</code>: Swap top 2 elements in stack <code>a</code><br>
   - <code>ss</code>: <code>sa</code> & <code>sb</code> simultaneously<br>
-  - <code>pa</code>: <br>
+  - <code>pa</code> <code>(push a)</code>: Move element at top of <code>b</code> and place on top of <code>a</code><br>
+  - <code>pb</code> <code>(push b)</code>: Move element at top of <code>a</code> and place on top of <code>b</code><br>
+  - <code>ra</code> <code>(rotate a)</code>: Shift up all elements in stack <code>a</code>. First element becomes the last.<br>
+  - <code>rb</code> <code>(rotate b)</code>: Shift up all elements in stack <code>b</code>. First element becomes the last.<br>
+  - <code>rr</code>: <code>ra</code> & <code>rb</code> simultaneously<br>
+  - <code>rrb</code> <code>(reverse rotate b)</code>: Shift down all elements in stack <code>b</code>. Last element becomes the first.<br>
+  - <code>rra</code> <code>(reverse rotate a)</code>: Shift down all elements in stack <code>a</code>. Last element becomes the first.<br>
+  - <code>rrr</code>: <code>rra</code> & <code>rrb</code> simultaneously<br><br>
+
 
   Across<br><br>
   May only use 2 signals - SIGUSR1 & SIGUSR2.<br><br>
