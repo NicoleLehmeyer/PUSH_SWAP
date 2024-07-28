@@ -37,17 +37,17 @@
   <br>
   <br>
   <b>PushSwap Method:</b><br>
-  1.  Process arguments: Return error if argument format is incorrect (ie. non-number, non-sign characters) or duplicates are present, handle '+' and '-', and handle if args are written in "", ie. "20 -3 80". Handle <br>
+  1.  Process arguments: Return error if argument format is incorrect (ie. non-number, non-sign characters) or duplicates are present, handle '+' and '-', and handle if args are written in "", ie. "20 -3 80".<br>
   2.  Initialise stacks & fill 'stack a'<br>
   3.  PUSH SWAP SORT: (a) small sorts for 2 & 3 integers. (b) big sort for < 3 integers<br>
   4.  Free stacks<br>
   <br>
   <b>Big Sort Method:</b><br>
-    1. Push all but 3 integers to 'stack b'<br>
-    2. Small sort on 'stack a' to create an ascending order<br>
-    3. For each integer in 'stack b', assign: (1) target position - position in 'stack a' with value of next lowest value, (2) cost - lowest number of moves to get 'stack b' integer to its target position in 'stack a'.<br>
-    4. Execute the sequence of operations for the 'stack b' integer with the 'cheapest' move number to get to its target position.<br>
-    5. Repeat until there are no values in 'stack b', then ra/rra (dependent on if smallest int is in top or bottom half of the stack) until the smallest value is at the top of the stack.<br>
+  1.  Push all but 3 integers to 'stack b'<br>
+  2.  Small sort on 'stack a' to create an ascending order<br>
+  3.  For each integer in 'stack b', assign: (1) target position - position in 'stack a' with value of next lowest value, (2) cost - lowest number of moves to get 'stack b' integer to its target position in 'stack a'.<br>
+  4.  Execute the sequence of operations for the 'stack b' integer with the 'cheapest' move number to get to its target position.<br>
+  5.  Repeat until there are no values in 'stack b', then ra/rra (dependent on if smallest int is in top or bottom half of the stack) until the smallest value is at the top of the stack.<br>
   <br>
 
   
