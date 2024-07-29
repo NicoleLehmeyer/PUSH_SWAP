@@ -56,9 +56,22 @@
 
 Create executables: ```make```
 
-Run server in one terminal: ```./server```
+Run program: ```ARG="<integers seperated by ' ' character>; ./push_swap $ARG```
 
-Run client in another terminal: ```./client <server_PID> <string__to_send>```
+ie.: ```ARG=""54 32 0 67 88 -1234 51 567"; ./push_swap $ARG```
+
+Run program with checker: ```ARG="<integers seperated by ' ' character>"; ./push_swap $ARG | ./checker_mac $ARG:```
+
+ie. ```ARG="54 32 0 67 88 -1234 51 567"; ./push_swap $ARG | ./checker_mac $ARG```
+
+My friend Nate(**will insert his GitHub here soon**) created a fantastic push_swap checker, which can be used on my program with: ```./push_swap_tester.sh```
+
+You may also specify number of integers to test with and how many times you wish to test: ```./push_swap_tester.sh <no. of integers> -r <no. of tests run>```
+
+ie. ```./push_swap_tester.sh 100 -r 200``` (run program with 100 integers, 200 times)
+
+**Ensure to ```chmod 777``` 'checker_Mac' and 'push_swap_tester.sh'
+
 <p>
   <br>
 </p>
