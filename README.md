@@ -27,9 +27,7 @@
   - <code>rra</code>: <code>(reverse rotate a)</code> Shift down all elements in stack <code>a</code>. Last element becomes the first.<br>
   - <code>rrr</code>: <code>rra</code> & <code>rrb</code> simultaneously<br>
   <br>
-  List of operations executed must display in the standard output, each seperated by a newline character.<br>
-
-
+  List of operations executed must display in the standard output, each seperated by a newline character.<br><br>
   Use of <a href="https://github.com/NicoleLehmeyer/LIBFT">libft</a> is permitted.<br><br>
   No global variables permitted.<br><br>
   Program must be written in C, and <a href="https://github.com/NicoleLehmeyer/LIBFT/blob/main/subject/norme.pdf">Norminette</a> (42 organisational syntax) compliant, without seg fault/bus error/double free etc.
