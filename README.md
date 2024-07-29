@@ -56,17 +56,17 @@
 <p>
   Create executables: <code>make</code><br>
   <br>
-  Run program: <code>ARG="<integers seperated by ' ' character>; ./push_swap $ARG</code><br>
+  <b>Run program:<b> <code>ARG="<integers seperated by ' ' character>; ./push_swap $ARG</code><br>
   <br>
   ie.: <code>ARG=""54 32 0 67 88 -1234 51 567"; ./push_swap $ARG</code><br>
   <br>
-  Run program with checker: <code>ARG="<integers seperated by ' ' character>"; ./push_swap $ARG | ./checker_mac $ARG:</code><br>
+  <b>Run program with checker:</b> <code>ARG="<integers seperated by ' ' character>"; ./push_swap $ARG | ./checker_mac $ARG:</code><br>
   <br>
   ie. <code>ARG="54 32 0 67 88 -1234 51 567"; ./push_swap $ARG | ./checker_mac $ARG</code><br>
   <br>
-  My friend Nate created a fantastic push_swap checker, which can be used on my program with: <code>./push_swap_tester.sh</code><br>
+  <b>My friend Nate created a fantastic push_swap checker, which can be used on my program with:</b> <code>./push_swap_tester.sh</code><br>
   <br>
-  Check out Nate's github <a href="https://github.com/redback0">here</a>.<br>
+  <b>Check out Nate's github <a href="https://github.com/redback0">here</a>.</b><br>
   <br>
   You may also specify number of integers to test with and how many times you wish to test: <code>./push_swap_tester.sh <no. of integers> -r <no. of tests run></code><br>
   <br>
