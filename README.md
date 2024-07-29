@@ -37,7 +37,7 @@
   <b>PushSwap Method:</b><br>
   1.  Process arguments: Return error if argument format is incorrect (ie. non-number, non-sign characters) or duplicates are present, handle '+' and '-', and handle if args are written in "", ie. "20 -3 80".<br>
   2.  Initialise stacks & fill 'stack a'<br>
-  3.  PUSH SWAP SORT: (a) small sorts for 2 & 3 integers. (b) big sort (as written below) for < 3 integers<br>
+  3.  PUSH SWAP SORT: (a) small sorts for 2 & 3 integers. (b) big sort (as written below) for > 3 integers<br>
   4.  Free stacks<br>
   <br>
   <b>Big Sort Method:</b><br>
