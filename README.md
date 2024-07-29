@@ -53,30 +53,27 @@
 </p>
 
 ## Run Program:
-
-Create executables: ```make```
-
-Run program: ```ARG="<integers seperated by ' ' character>; ./push_swap $ARG```
-
-ie.: ```ARG=""54 32 0 67 88 -1234 51 567"; ./push_swap $ARG```
-
-Run program with checker: ```ARG="<integers seperated by ' ' character>"; ./push_swap $ARG | ./checker_mac $ARG:```
-
-ie. ```ARG="54 32 0 67 88 -1234 51 567"; ./push_swap $ARG | ./checker_mac $ARG```
-
-My friend Nate created a fantastic push_swap checker, which can be used on my program with: ```./push_swap_tester.sh```
-
 <p>
-Check out Nate's github <a href="https://github.com/redback0">here</a>.
-</p>
-
-You may also specify number of integers to test with and how many times you wish to test: ```./push_swap_tester.sh <no. of integers> -r <no. of tests run>```
-
-ie. ```./push_swap_tester.sh 100 -r 200``` (run program with 100 integers, 200 times)
-
-<b>**Ensure to ```chmod 777``` 'checker_Mac' and 'push_swap_tester.sh'**</b>
-
-<p>
+  Create executables: ```make```<br>
+  <br>
+  Run program: ```ARG="<integers seperated by ' ' character>; ./push_swap $ARG```<br>
+  <br>
+  ie.: ```ARG=""54 32 0 67 88 -1234 51 567"; ./push_swap $ARG```<br>
+  <br>
+  Run program with checker: ```ARG="<integers seperated by ' ' character>"; ./push_swap $ARG | ./checker_mac $ARG:```<br>
+  <br>
+  ie. ```ARG="54 32 0 67 88 -1234 51 567"; ./push_swap $ARG | ./checker_mac $ARG```<br>
+  <br>
+  My friend Nate created a fantastic push_swap checker, which can be used on my program with: ```./push_swap_tester.sh```<br>
+  <br>
+  Check out Nate's github <a href="https://github.com/redback0">here</a>.<br>
+  <br>
+  You may also specify number of integers to test with and how many times you wish to test: ```./push_swap_tester.sh <no. of integers> -r <no. of tests run>```<br>
+  <br>
+  ie. ```./push_swap_tester.sh 100 -r 200``` (run program with 100 integers, 200 times)<br>
+  <br>
+  <b>**Ensure to ```chmod 777``` 'checker_Mac' and 'push_swap_tester.sh'**</b><br>
+  <br>
   <br>
 </p>
 
