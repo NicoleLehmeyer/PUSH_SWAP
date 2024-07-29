@@ -12,17 +12,37 @@
 
 #include "pushswap.h"
 
+// char	**two_args(char **argv)
+// {
+// 	char	**new_argv;
+// 	char	*all_args;
+// 	char	*temp;
+
+// 	temp = ft_strdup(argv[1]);
+// 	temp = ft_strjoin(ft_strjoin(argv[0], " "), temp);
+// 	all_args = ft_strjoin(argv[0], temp);
+// 	free(temp);
+// 	new_argv = ft_split(all_args, ' ');
+// 	free(all_args);
+// 	return (new_argv);
+// }
+
 char	**two_args(char **argv)
 {
 	char	**new_argv;
+	char	*dup_tmp;
+	char	*join_tmp;
+	char	*tmp_tmp;
 	char	*all_args;
-	char	*temp;
 
-	temp = ft_strdup(argv[1]);
-	temp = ft_strjoin(ft_strjoin(argv[0], " "), temp);
-	all_args = ft_strjoin(argv[0], temp);
-	free(temp);
+	dup_tmp = ft_strdup(argv[1]);
+	tmp_tmp = ft_strjoin(argv[0], " ");
+	join_tmp = ft_strjoin(tmp_tmp, dup_tmp);
+	all_args = ft_strjoin(argv[0], join_tmp);
 	new_argv = ft_split(all_args, ' ');
+	free(dup_tmp);
+	free(tmp_tmp);
+	free(join_tmp);
 	free(all_args);
 	return (new_argv);
 }
@@ -43,6 +63,7 @@ void	process_args(int argc, char **argv, int *use_argc, char ***use_argv)
 	{
 		*use_argv = two_args(argv);
 		*use_argc = count_args(*use_argv);
+		ft_free_array(argv);
 	}
 	else
 	{
