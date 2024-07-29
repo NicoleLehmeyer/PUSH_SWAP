@@ -64,12 +64,10 @@ int	has_greater_than_max_int(char **argv)
 		len = ft_strlen(argv[i]);
 		if (len >= 12)
 			return (1);
-		if (len == 11 && ft_strncmp((argv[i] + 1),
-				"2147483648", 10) > 0 && argv[i][0] == '-')
+		if (len == 11 && (ft_strncmp((argv[i] + 1),
+				"2147483648", 10) > 0 || argv[i][0] != '-'))
 			return (1);
 		if (len == 10 && ft_strncmp(argv[i], "2147483647", 10) > 0)
-			return (1);
-		if (len == 11 && ft_strncmp(argv[i], "21474836470", 11) == 0)
 			return (1);
 		i++;
 	}
