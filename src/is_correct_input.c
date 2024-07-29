@@ -76,7 +76,7 @@ int	is_correct_input(char **argv)
 	}
 	if (nb_zero_args > 1)
 		return (0);
-	if (has_duplicates(argv) || has_greater_than_int_max(argv))
+	if (has_duplicates(argv) || has_greater_than_max_int(argv))
 		return (0);
 	return (1);
 }

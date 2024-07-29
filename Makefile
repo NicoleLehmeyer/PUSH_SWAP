@@ -29,14 +29,14 @@ OBJECTS = $(SOURCES:src/%.c=obj/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJECTS) $(LIBFT_ARCHIVE)
-	gcc $(FLAGS) $(LIBFT_ARCHIVE) $(OBJECTS) -o $(NAME)
+	cc $(FLAGS) $(LIBFT_ARCHIVE) $(OBJECTS) -o $(NAME)
 
 obj/%.o: src/%.c
 	mkdir -p obj
-	cc $(FLAGS) -Imlx -c $< -o $@
+	cc $(FLAGS) -c $< -o $@
 
 $(LIBFT_ARCHIVE):
-	$(MAKE) -s -C LIBFT
+	$(MAKE) -s -C include/LIBFT
 
 clean:
 	rm -rf obj
