@@ -57,19 +57,15 @@
   <b>Create executables:</b> <code>make</code><br>
   <br>
   <b>Run program:</b> <code>ARG="<integers seperated by ' ' character>; ./push_swap $ARG</code><br>
-  <br>
   ie.: <code>ARG=""54 32 0 67 88 -1234 51 567"; ./push_swap $ARG</code><br>
   <br>
   <b>Run program with checker:</b> <code>ARG="<integers seperated by ' ' character>"; ./push_swap $ARG | ./checker_mac $ARG:</code><br>
-  <br>
   ie. <code>ARG="54 32 0 67 88 -1234 51 567"; ./push_swap $ARG | ./checker_mac $ARG</code><br>
   <br>
   <b>My friend Nate created a fantastic push_swap checker, which can be used on my program with:</b> <code>./push_swap_tester.sh</code><br>
-  <br>
   <b>Check out Nate's github <a href="https://github.com/redback0">here</a>.</b><br>
   <br>
   You may also specify number of integers to test with and how many times you wish to test: <code>./push_swap_tester.sh <no. of integers> -r <no. of tests run></code><br>
-  <br>
   ie. <code>./push_swap_tester.sh 100 -r 200</code> (run program with 100 integers, 200 times)<br>
   <br>
   <b>**Ensure to <code>chmod 777</code> 'checker_Mac' and 'push_swap_tester.sh'**</b><br>
