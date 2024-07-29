@@ -54,9 +54,9 @@
 
 ## Run Program:
 <p>
-  Create executables: <code>make</code><br>
+  <b>Create executables:</b> <code>make</code><br>
   <br>
-  <b>Run program:<b> <code>ARG="<integers seperated by ' ' character>; ./push_swap $ARG</code><br>
+  <b>Run program:</b> <code>ARG="<integers seperated by ' ' character>; ./push_swap $ARG</code><br>
   <br>
   ie.: <code>ARG=""54 32 0 67 88 -1234 51 567"; ./push_swap $ARG</code><br>
   <br>
