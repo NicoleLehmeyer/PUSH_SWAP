@@ -53,17 +53,23 @@ int	nb_str_cmp(const char *s1, const char *s2)
 	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
 }
 
-int	has_greater_than_max_int(char *argv)
+int	has_greater_than_max_int(char **argv)
 {
-	int len;
-	
-	len = ft_strlen(argv);
-	if (len >= 12)
-		return (1);
-	if (len == 11 && ft_strncmp((argv + 1), "2147483648", 10) > 0 && argv[0] == '-')
-		return (1);
-	if (len == 10 && ft_strncmp(argv, "2147483647", 10) > 0)
-		return (1);
+	int	len;
+	int i;
+
+	i = 1;
+	len = ft_strlen(argv[i]);
+	while (argv[i])
+	{
+		if (len >= 12)
+			return (1);
+		if (len == 11 && ft_strncmp((argv + 1), "2147483648", 10) > 0 && argv[0] == '-')
+			return (1);
+		if (len == 10 && ft_strncmp(argv, "2147483647", 10) > 0)
+			return (1);
+		i++;
+	}
 	else
 		return (0);
 }

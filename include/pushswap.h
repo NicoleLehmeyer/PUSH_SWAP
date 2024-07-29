@@ -65,7 +65,7 @@ int		is_correct_input(char **argv);
 int		is_digit(char c);
 int		is_sign(char c);
 int		nb_str_cmp(const char *s1, const char *s2);
-int		has_greater_than_max_int(char *argv);
+int		has_greater_than_max_int(char **argv);
 
 // ** initstack.c ** //
 t_stack	*fill_stack(int argc, char **argv);
