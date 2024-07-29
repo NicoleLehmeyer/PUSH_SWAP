@@ -64,13 +64,13 @@ Run program with checker: ```ARG="<integers seperated by ' ' character>"; ./push
 
 ie. ```ARG="54 32 0 67 88 -1234 51 567"; ./push_swap $ARG | ./checker_mac $ARG```
 
-My friend Nate(**will insert his GitHub here soon**) created a fantastic push_swap checker, which can be used on my program with: ```./push_swap_tester.sh```
+My friend Nate (**will insert his GitHub here soon**) created a fantastic push_swap checker, which can be used on my program with: ```./push_swap_tester.sh```
 
 You may also specify number of integers to test with and how many times you wish to test: ```./push_swap_tester.sh <no. of integers> -r <no. of tests run>```
 
 ie. ```./push_swap_tester.sh 100 -r 200``` (run program with 100 integers, 200 times)
 
-**Ensure to ```chmod 777``` 'checker_Mac' and 'push_swap_tester.sh'
+<b>**Ensure to ```chmod 777``` 'checker_Mac' and 'push_swap_tester.sh'**</b>
 
 <p>
   <br>
