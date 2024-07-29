@@ -63,11 +63,16 @@ void	process_args(int argc, char **argv, int *use_argc, char ***use_argv)
 	{
 		*use_argv = two_args(argv);
 		*use_argc = count_args(*use_argv);
-		ft_free_array(argv);
 	}
 	else
 	{
 		*use_argv = argv;
 		*use_argc = argc;
 	}
+}
+
+void	free_use_argv(int argc, char **array)
+{
+	if (argc == 2)
+		ft_free_array(array);
 }

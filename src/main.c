@@ -60,6 +60,7 @@ int	main(int argc, char **argv)
 	stack_size = find_stack_size(stack_a);
 	assign_index(stack_a, stack_size);
 	push_swap(&stack_a, &stack_b, stack_size);
+	free_use_argv(argc, use_argv);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

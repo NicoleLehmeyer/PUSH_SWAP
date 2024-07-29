@@ -69,6 +69,8 @@ int	has_greater_than_max_int(char **argv)
 			return (1);
 		if (len == 10 && ft_strncmp(argv[i], "2147483647", 10) > 0)
 			return (1);
+		if (len == 11 && ft_strncmp(argv[i], "21474836470", 11) == 0)
+			return (1);
 		i++;
 	}
 	return (0);

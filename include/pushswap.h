@@ -54,6 +54,7 @@ void	print_stack_tarpos(t_stack *stack);
 char	**two_args(char **argv);
 int		count_args(char **argv);
 void	process_args(int argc, char **argv, int *use_argc, char ***use_argv);
+void	free_use_argv(int argc, char **array);
 
 // ** is_correct_input.c ** //
 int		has_duplicates(char **argv);
